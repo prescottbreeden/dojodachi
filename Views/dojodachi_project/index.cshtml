@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojodachi</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Dojodachi</h1>
+        </div>
+        <div class="stats">
+            <div class="happiness stat">Happiness: @ViewBag.happiness</div>
+            <div class="fullness stat">Fullness: @ViewBag.fullness</div>
+            <div class="energy stat">Energy: @ViewBag.energy</div>
+            <div class="meals stat">Meals: @ViewBag.meals</div>
+        </div>
+        <div class="actions">
+            <div class="feed">
+                <form action="feed" method="POST">
+                    <button type="submit">Feed </button>
+                </form>
+            </div>
+            <div class="play">
+                <form action="play" method="POST">
+                    <button type="submit">Play</button>
+                </form>
+            </div>
+            <div class="work">
+                <form action="work" method="POST">
+                    <button type="submit">Work </button>
+                </form>
+            </div>
+            <div class="sleep">
+                <form action="sleep" method="POST">
+                    <button type="submit">Sleep</button>
+                </form>
+            </div>
+        </div>
+        <div class="message_log">
+            <p>@ViewBag.lastAction</p>
+        </div>
+    </div>
+</body>
+</html>
